@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         XEN
+// @name         XEN Redesgined
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.2
 // @description  A re-themed version of XEN
-// @author       Quincess
+// @author       Marshal
 // @match        https://www.kogama.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=kogama.com
 // @grant        none
@@ -13,7 +13,7 @@ const style = document.createElement('style');
 style.type = 'text/css';
 
 const css = `
-  body {
+  #root-page-mobile {
    background : linear-gradient(260deg,hsl(0, 0%, 8.2%),hsl(0, 0%, 8.2%)) !important;
 }
 
@@ -29,7 +29,7 @@ const css = `
 }
 
 .css-1udp1s3, .css-zslu1c, .css-k9ok3b, .css-1c1ttle, ._1Yt8Y {
-    background: #111 !important;
+    background: #0000 !important;
     border-radius: 10px !important;
     padding: 15px !important;
     position: relative !important;
@@ -41,22 +41,9 @@ const css = `
 }
 
 ._13UrL ._23KvS ._33DXe{
-   background-image : url('https://images.alphacoders.com/135/1351306.png') !important;
+   background-image : url("https://www.kogstatic.com/gen_cache/da/7d/da7d17f2-bdc7-4262-a9a0-544eb545091c_600x240.png") !important;
    opacity : 10;
-   filter : blur(7px);
-}
-
-._3TORb{
-   transform : none !important; /*DO NOT CHANGE*/
-    width : 30px;
-    opacity : 0;
-    transition : 1s !important;
-}
-
-._3TORb:hover{
-   width : 260px;
-   opacity : 1;
-   transition : 1s !important;
+   filter : blur(4px);
 }
 
 .css-9la3qa, .css-16fidy5, .css-rqc8s9, .css-qr6c39, a.MuiButton-root, .css-cisn0m, .css-1vyp3ps{
@@ -103,6 +90,10 @@ animation: spin 2.5s ease-in;
     }
 }
 
+._3IcXz, ._2hUvr ._3wV6q{
+   position: inherit !important;
+}
+
 `;
 
 style.innerHTML = css;
@@ -110,7 +101,7 @@ style.innerHTML = css;
 document.head.appendChild(style);
 
 (function () {
-    const gifURL = "https://cdn3.emoji.gg/emojis/38706-playfulcat.gif";
+    const gifURL = "https://cdn3.emoji.gg/emojis/5988-pixelbongocat.gif";
 
     function replaceLogo() {
         const logo = document.querySelector('img[alt="KoGaMa"]');
